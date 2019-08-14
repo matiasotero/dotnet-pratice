@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using testing_dotnet.Interfaces;
 
-namespace testing_dotnet
+namespace testing_dotnet.Models
 {
     public class Exercise_1: IExercise_1
     {
