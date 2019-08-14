@@ -1,21 +1,27 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using testing_dotnet.Interfaces;
 
 namespace testing_dotnet
 {
-    public class Excerise_1
+    public class Exercise_1: IExercise_1
     {
+        private List<int> list = null;
+        public Exercise_1(List<int> listInt)
+        {
+            list = listInt;
+        }
 
-        public static List<int> FilterList(List<int> list)
+        public List<int> FilterList()
         {
             return list.Distinct().ToList();
         }
 
-        public static IEnumerable<int> FilterListWithYield(List<int> listInt)
+        public IEnumerable<int> FilterListWithYield()
         {
             int aux = 0;
-            foreach(int item in listInt.OrderBy(x => x).ToList())
+            foreach(int item in list.OrderBy(x => x).ToList())
             {
                 if(item != aux)
                 {
@@ -25,7 +31,7 @@ namespace testing_dotnet
             }
         }
 
-        public static void PrintList(List<int> list)
+        public void PrintList(List<int> list)
         {
             foreach (int item in list)
             {

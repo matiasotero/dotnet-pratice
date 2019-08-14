@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using testing_dotnet.Interfaces;
 
 namespace testing_dotnet
 {
-    public class Exercise_2
+    public class Exercise_2: IExercise_2
     {
         private int quantity = 0;
         public Exercise_2(int quantitySteps)
